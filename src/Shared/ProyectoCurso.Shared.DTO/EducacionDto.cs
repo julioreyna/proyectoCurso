@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoCurso.Shared.DTO
 {
-    public class Educacion
+    public class EducacionDto
     {
         public int Id { get; set; }
         public int Userid { get; set; }

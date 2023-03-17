@@ -2,7 +2,7 @@
 
 namespace ProyectoCurso.Shared.DTO
 {
-    public class PerfilPersonal
+    public class PerfilPersonalDto
     {
 
         public int idperfilpersonal { get; set; }

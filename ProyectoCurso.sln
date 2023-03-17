@@ -5,13 +5,15 @@ VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProyectoCurso.BackEnd.API", "src\BackEnd\ProyectoCurso.BackEnd.API\ProyectoCurso.BackEnd.API.csproj", "{484FA970-CF4B-4E5F-8425-B3D847E6D202}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoCurso.BackEnd.Tests", "src\BackEnd\ProyectoCurso.BackEnd.Tests\ProyectoCurso.BackEnd.Tests.csproj", "{C56D1943-3ECD-4E97-B2E2-D51407358E69}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProyectoCurso.BackEnd.Tests", "src\BackEnd\ProyectoCurso.BackEnd.Tests\ProyectoCurso.BackEnd.Tests.csproj", "{C56D1943-3ECD-4E97-B2E2-D51407358E69}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoCurso.BackEnd.Services", "src\BackEnd\ProyectoCurso.BackEnd.Services\ProyectoCurso.BackEnd.Services.csproj", "{164202D6-304F-43DC-9855-A876FE4FC7B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProyectoCurso.BackEnd.Services", "src\BackEnd\ProyectoCurso.BackEnd.Services\ProyectoCurso.BackEnd.Services.csproj", "{164202D6-304F-43DC-9855-A876FE4FC7B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoCurso.BackEnd.Data", "src\BackEnd\ProyectoCurso.BackEnd.Data\ProyectoCurso.BackEnd.Data.csproj", "{9E900185-5A2A-46CA-998B-D8B83C55F349}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProyectoCurso.BackEnd.Data", "src\BackEnd\ProyectoCurso.BackEnd.Data\ProyectoCurso.BackEnd.Data.csproj", "{9E900185-5A2A-46CA-998B-D8B83C55F349}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoCurso.Shared.DTO", "src\Shared\ProyectoCurso.Shared.DTO\ProyectoCurso.Shared.DTO.csproj", "{1C8BC9F5-1EFB-453D-966B-8C2D5B225D4D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProyectoCurso.Shared.DTO", "src\Shared\ProyectoCurso.Shared.DTO\ProyectoCurso.Shared.DTO.csproj", "{1C8BC9F5-1EFB-453D-966B-8C2D5B225D4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoCurso.Shared.ROP", "src\Shared\ProyectoCurso.Shared.ROP\ProyectoCurso.Shared.ROP.csproj", "{163A8144-5F9E-4162-B2BF-12BCD8DE0D74}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{1C8BC9F5-1EFB-453D-966B-8C2D5B225D4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C8BC9F5-1EFB-453D-966B-8C2D5B225D4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C8BC9F5-1EFB-453D-966B-8C2D5B225D4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{163A8144-5F9E-4162-B2BF-12BCD8DE0D74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{163A8144-5F9E-4162-B2BF-12BCD8DE0D74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{163A8144-5F9E-4162-B2BF-12BCD8DE0D74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{163A8144-5F9E-4162-B2BF-12BCD8DE0D74}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

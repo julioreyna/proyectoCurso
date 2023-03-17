@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace ProyectoCurso.Shared.DTO
 {
-    internal class Intrereses
+    public class InteresesDto
     {
+        public int Id { get; set; }
+        public int UserId { get; set; }
+        public string Descripcion { get; set; }
     }
 }
