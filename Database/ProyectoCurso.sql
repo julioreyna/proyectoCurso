@@ -1,5 +1,6 @@
 CREATE DATABASE `proyectoCurso` /*!40100 DEFAULT CHARACTER SET utf8 */;
 
+use `proyectoCurso`;
 
 CREATE TABLE `educacion` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
