@@ -6,4 +6,12 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <EditorConfigFiles Remove="C:\assurance\ProyectoCurso\src\Shared\ProyectoCurso.Shared.DTO\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="C:\assurance\ProyectoCurso\src\Shared\ProyectoCurso.Shared.DTO\.editorconfig" />
+  </ItemGroup>
+
 </Project>
