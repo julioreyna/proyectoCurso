@@ -1,49 +1,44 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.ExceptionServices;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Runtime.ExceptionServices;
 
 namespace ProyectoCurso.Shared.ROP
 {
     public static class Result_Then
     {
-    public static Result<T> Then<T>(this Result<T> r, Action<T> action)
-    {
-        try
+        public static Result<T> Then<T>(this Result<T> r, Action<T> action)
         {
-            if (r.Success)
+            try
             {
-                action(r.Value);
+                if (r.Success)
+                {
+                    action(r.Value);
+                }
+
+                return r;
             }
-
-            return r;
-        }
-        catch (Exception e)
-        {
-            ExceptionDispatchInfo.Capture(e).Throw();
-            throw;
-        }
-    }
-
-    public static async Task<Result<T>> Then<T>(this Task<Result<T>> result, Action<T> action)
-    {
-        try
-        {
-            var r = await result;
-            if (r.Success)
+            catch (Exception e)
             {
-                action(r.Value);
+                ExceptionDispatchInfo.Capture(e).Throw();
+                throw;
             }
+        }
 
-            return r;
-        }
-        catch (Exception e)
+        public static async Task<Result<T>> Then<T>(this Task<Result<T>> result, Action<T> action)
         {
-            ExceptionDispatchInfo.Capture(e).Throw();
-            throw;
+            try
+            {
+                var r = await result;
+                if (r.Success)
+                {
+                    action(r.Value);
+                }
+
+                return r;
+            }
+            catch (Exception e)
+            {
+                ExceptionDispatchInfo.Capture(e).Throw();
+                throw;
+            }
         }
-    }
     }
 }

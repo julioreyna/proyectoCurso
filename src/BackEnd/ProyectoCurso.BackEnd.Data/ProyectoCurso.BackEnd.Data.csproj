@@ -6,4 +6,14 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.123" />
+    <PackageReference Include="MySql.Data" Version="8.0.32.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\ProyectoCurso.Shared.Data\ProyectoCurso.Shared.Data.csproj" />
+    <ProjectReference Include="..\ProyectoCurso.BackEnd.Model\ProyectoCurso.BackEnd.Model.csproj" />
+  </ItemGroup>
+
 </Project>

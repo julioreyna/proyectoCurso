@@ -1,9 +1,6 @@
-﻿using System;
-using System.Data.Common;
-using System.Threading;
-using System.Threading.Tasks;
+﻿using System.Data.Common;
 
-namespace ProyectoCurso.BackEnd.Data.Db;
+namespace ProyectoCurso.Shared.Data.Db;
 
 public class TransactionalWrapper : ConnectionWrapper
 {

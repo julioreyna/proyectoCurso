@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-
-namespace ProyectoCurso.Shared.ROP
+﻿namespace ProyectoCurso.Shared.ROP
 {
 
     public class Error

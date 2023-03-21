@@ -1,6 +1,6 @@
 ﻿using System.Data.Common;
 
-namespace ProyectoCurso.BackEnd.Data.Db;
+namespace ProyectoCurso.Shared.Data.Db;
 
 public class ConnectionWrapper : IDisposable
 {

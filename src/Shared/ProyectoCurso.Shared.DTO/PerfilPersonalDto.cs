@@ -1,6 +1,4 @@
-﻿using System.Xml;
-
-namespace ProyectoCurso.Shared.DTO
+﻿namespace ProyectoCurso.Shared.DTO
 {
     public class PerfilPersonalDto
     {
