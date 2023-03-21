@@ -5,7 +5,7 @@ namespace ProyectoCurso.Shared.DTO
     public class PerfilPersonalDto
     {
 
-        public int idperfilpersonal { get; set; }
+        public int? idperfilpersonal { get; set; }
         public string email { get; set; }
         public string telefono { get; set; }
         public int userid { get; set; }
