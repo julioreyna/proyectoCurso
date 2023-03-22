@@ -20,7 +20,9 @@ public class GetPerfilPersonal
 {
     private readonly IGetPerfilPersonalDependencies _dependencies;
     private readonly IDataProtector _protector;
-    public GetPerfilPersonal(IGetPerfilPersonalDependencies dependencies, IDataProtectionProvider provider , IHttpContextAccessor httpContextAccesor     )
+    public GetPerfilPersonal(IGetPerfilPersonalDependencies dependencies, 
+                            IDataProtectionProvider provider , 
+                            IHttpContextAccessor httpContextAccesor )
     {
         _dependencies = dependencies;
         _protector = provider.CreateProtector("GetPerfilPersonal.Protector");
@@ -47,13 +49,13 @@ public class GetPerfilPersonal
     {
         PerfilPersonalDto perfil = new PerfilPersonalDto()
         {
-            descripcion = values.Descripcion,
-            idperfilpersonal= values.Idperfilpersonal,
-            userid = values.Userid,
-            apellido = values.Apellido,
-            nombre= values.Nombre,
-            email= values.Email,
-            telefono= values.Telefono
+            descripcion = values.descripcion,
+            idperfilpersonal= values.id,
+            userid = values.userid,
+            apellido = values.apellido,
+            nombre= values.nombre,
+            email= values.email,
+            telefono= values.telefono
         };
         return Task.FromResult( perfil );
     }

@@ -13,6 +13,8 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Shared\ProyectoCurso.Shared.DTO\ProyectoCurso.Shared.DTO.csproj" />
     <ProjectReference Include="..\..\Shared\ProyectoCurso.Shared.ROP\ProyectoCurso.Shared.ROP.csproj" />
+    <ProjectReference Include="..\ProyectoCurso.BackEnd.ServicesDependencies\ProyectoCurso.BackEnd.ServicesDependencies.csproj" />
+    <ProjectReference Include="..\ProyectoCurso.BackEnd.Services\ProyectoCurso.BackEnd.Services.csproj" />
   </ItemGroup>
 
 </Project>

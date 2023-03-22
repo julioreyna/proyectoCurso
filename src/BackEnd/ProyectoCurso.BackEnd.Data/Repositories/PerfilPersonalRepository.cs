@@ -16,22 +16,22 @@ namespace ProyectoCurso.BackEnd.Data.Repositories
         public override async Task<PerfilPersonalEntity> InsertSingle(PerfilPersonalEntity obj)
         {
             string sql = @$"Insert into {TableName} (
-                            {nameof(PerfilPersonalEntity.Userid)}, {nameof(PerfilPersonalEntity.Email)},
-                            {nameof(PerfilPersonalEntity.Nombre)}, {nameof(PerfilPersonalEntity.Apellido)},
-                            {nameof(PerfilPersonalEntity.Descripcion)}) 
-                        values (@{nameof(PerfilPersonalEntity.Userid)}, @{nameof(PerfilPersonalEntity.Email)},
-                            @{nameof(PerfilPersonalEntity.Nombre)}, @{nameof(PerfilPersonalEntity.Apellido)},
-                            @{nameof(PerfilPersonalEntity.Descripcion)}); 
+                            {nameof(PerfilPersonalEntity.userid)}, {nameof(PerfilPersonalEntity.email)},
+                            {nameof(PerfilPersonalEntity.nombre)}, {nameof(PerfilPersonalEntity.apellido)},
+                            {nameof(PerfilPersonalEntity.descripcion)}) 
+                        values (@{nameof(PerfilPersonalEntity.userid)}, @{nameof(PerfilPersonalEntity.email)},
+                            @{nameof(PerfilPersonalEntity.nombre)}, @{nameof(PerfilPersonalEntity.apellido)},
+                            @{nameof(PerfilPersonalEntity.descripcion)}); 
                         Select LAST_INSERT_ID();";
             using (DbConnection connection = await _conexionWrapper.GetConnectionAsync())
             {
                 var newId = (await connection.QueryAsync<int>(sql, new
                 {
-                    Userid = obj.Userid,
-                    Email = obj.Email,
-                    Nombre = obj.Nombre,
-                    Apellido = obj.Apellido,
-                    Descripcion = obj.Descripcion
+                    Userid = obj.userid,
+                    Email = obj.email,
+                    Nombre = obj.nombre,
+                    Apellido = obj.apellido,
+                    Descripcion = obj.descripcion
                 }
                             ))
                             .First();

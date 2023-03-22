@@ -1,6 +1,7 @@
 ﻿
 using Dapper;
 using ProyectoCurso.Shared.Data.Db;
+using System.Data;
 using System.Data.Common;
 
 
@@ -22,7 +23,7 @@ public abstract class BaseRepository<T>
     public async Task<T?> GetByUserId(int userId)
     {
         DbConnection connection = await _conexionWrapper.GetConnectionAsync();
-        return await connection.QueryFirstOrDefaultAsync<T?>($"select * from {TableName} where UserId = @userId", new
+        return await connection.QueryFirstOrDefaultAsync<T?>($"select * from {TableName} where userid = @userId", new
         {
             userId = userId
         });
