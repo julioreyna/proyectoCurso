@@ -10,6 +10,9 @@
         public string apellido { get; set; }
         public string? descripcion { get; set; }
 
+        //Este es el constructor VACIO que es necesario definir, para que nuestro
+        //mapeo desde la base se pueda hacer de manera automática, utilizando 
+        // generics
         public PerfilPersonalEntity()
         {
 
