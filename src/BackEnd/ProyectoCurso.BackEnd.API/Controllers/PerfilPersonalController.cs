@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using ProyectoCurso.BackEnd.Services.Mappers;
 using ProyectoCurso.BackEnd.Services.PerfilPersonal;
 using ProyectoCurso.Shared.DTO;
 using ProyectoCurso.Shared.ROP;
@@ -12,9 +13,11 @@ namespace ProyectoCurso.BackEnd.API.Controllers
     public class PerfilPersonalController : ControllerBase
     {
         private readonly GetPerfilPersonal _getPerfilPersonal;
-        public PerfilPersonalController(GetPerfilPersonal getPerfilPersonal)
+        private readonly PostPerfilPersonal _postPerfilPersonal;
+        public PerfilPersonalController(GetPerfilPersonal getPerfilPersonal, PostPerfilPersonal postPerfilPersonal)
         {
             _getPerfilPersonal = getPerfilPersonal;
+            _postPerfilPersonal = postPerfilPersonal;
 
         }
         [HttpGet("userId")]
@@ -27,6 +30,13 @@ namespace ProyectoCurso.BackEnd.API.Controllers
         private async Task<Result<PerfilPersonalDto>> GetPerfilPersonal(int userid)
         {
             return await _getPerfilPersonal.GetPerfilPersonalDto(userid);
+        }
+
+        [HttpPost]
+        public async Task<Result<PerfilPersonalDto>> Post (PerfilPersonalDto perfilPersonalDto)
+        {
+            return  await _postPerfilPersonal.Create(perfilPersonalDto)
+                 .Bind(x => GetPerfilPersonal(x.userid));
         }
 
     }

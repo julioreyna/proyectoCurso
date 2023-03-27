@@ -23,22 +23,26 @@ namespace ProyectoCurso.BackEnd.Data.Repositories
                             @{nameof(PerfilPersonalEntity.nombre)}, @{nameof(PerfilPersonalEntity.apellido)},
                             @{nameof(PerfilPersonalEntity.descripcion)}); 
                         Select LAST_INSERT_ID();";
-            using (DbConnection connection = await _conexionWrapper.GetConnectionAsync())
-            {
+            DbConnection connection = await _conexionWrapper.GetConnectionAsync();
+            
                 var newId = (await connection.QueryAsync<int>(sql, new
                 {
-                    Userid = obj.userid,
-                    Email = obj.email,
-                    Nombre = obj.nombre,
-                    Apellido = obj.apellido,
-                    Descripcion = obj.descripcion
+                    userid = obj.userid,
+                    email = obj.email,
+                    nombre = obj.nombre,
+                    apellido = obj.apellido,
+                    descripcion = obj.descripcion
                 }
                             ))
                             .First();
                 return PerfilPersonalEntity.Update(obj, newId);
-            }
+            
         }
 
+        public async Task CommitTransaction()
+            {                                   
+                await _conexionWrapper.CommitTransactionAsync();
+            }
         public override Task<PerfilPersonalEntity> UpdateSingle(PerfilPersonalEntity obj)
         {
             throw new NotImplementedException();

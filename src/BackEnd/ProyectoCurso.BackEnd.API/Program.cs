@@ -21,7 +21,9 @@ builder.Services.AddScoped<DbConnection>(a => new MySqlConnection("Server=127.0.
 builder.Services.AddScoped<TransactionalWrapper>();
 builder.Services.AddScoped<PerfilPersonalRepository>();
 builder.Services.AddScoped<IGetPerfilPersonalDependencies, GetPerfilPersonalDependencies>();
+builder.Services.AddScoped<IPostPerfilPersonalDependencies, PostPerfilPersonalDependencies>();
 builder.Services.AddScoped<GetPerfilPersonal>();
+builder.Services.AddScoped<PostPerfilPersonal>();
 
 // Fin Servicios con dependencia
 builder.Services.AddSwaggerGen();

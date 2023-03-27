@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoCurso.BackEnd.Services.PerfilPersonal
 {
-    internal class PutPerfilPersonal
+    public class PutPerfilPersonal
     {
     }
 }

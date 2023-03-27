@@ -24,6 +24,14 @@ public static class PerfilPersonalDtoMapper
         return new PostPerfilPersonalWrapper(perfilPersonal);
     }
 
+    public static PerfilPersonalEntity Map(this PerfilPersonalDto perfilDto, int userId, IDataProtector protector)
+    {
+        string encriptedPhone = protector.Protect(perfilDto.telefono);
+        string encriptedEmail = protector.Protect(perfilDto.email);
+
+        return PerfilPersonalEntity.Create(userId, perfilDto.userid, perfilDto.nombre, perfilDto.apellido, perfilDto.descripcion,
+            encriptedPhone, encriptedEmail);
+    }
 }
 
 public class PostPerfilPersonalWrapper
